@@ -1,0 +1,22 @@
+version: "3.2"
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: 'RabbitMQ-Management'
+    ports:
+      - 15671:15671
+      - 15672:15672
+      - 15691:15691
+      - 15692:15692
+      - 25672:25672
+      - 4369:4369
+      - 5671:5671
+      - 5672:5672
+    networks:
+      - rabbitmq_network
+    environment:
+      RABBITMQ_DEFAULT_VHOST: 'seneca'
+
+networks:
+  rabbitmq_network:
+    driver: bridge

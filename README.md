@@ -1,0 +1,4 @@
+- Build RabbitMQ Docker Container: `docker-compose build`
+- Start RabbitMQ: `docker-compose up`
+- Start Seneca Listener: `node server.js`
+- Finally, use client to send data: `node client.js`
